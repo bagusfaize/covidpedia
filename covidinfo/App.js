@@ -38,12 +38,29 @@ const App: () => React$Node = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
-          <View style={styles.body}>
+          <View style={styles.header}>
             <View style={styles.sectionContainer}>
-                <View>
-                <Text style={styles.sectionTitle}>Welcome to Covidinfo</Text>
+              <View>
+                <Text style={styles.sectionTitle}>Today</Text>
+                <Text style={styles.sectionTitleBold}>Corona Virus Update</Text>
+              </View>
+              <View style={{ flex: 1, flexDirection: 'row', marginTop: 55 }}>
+                <View style={{ flex: 1, height: 50, alignItems: 'center', borderRightColor:'white', borderRightWidth:.5}}>
+                  <Text style={styles.displayFont}>287.000</Text>
+                  <Text style={{fontSize:14, color:'#fff', fontWeight: 'bold'}}>Cases</Text>
+                </View>
+                <View style={{ flex: 1, height: 50, alignItems: 'center', borderRightColor:'white', borderRightWidth:.5}}>
+                  <Text style={styles.displayFont}>215.000</Text>
+                  <Text style={{fontSize:14, color:'#fff', fontWeight: 'bold'}}>Recovered</Text>
+                </View>
+                <View style={{ flex: 1, height: 50, alignItems: 'center'}}>
+                  <Text style={styles.displayFont}>10.000</Text>
+                  <Text style={{fontSize:14, color:'#fff', fontWeight: 'bold'}}>Deaths</Text>
+                </View>
               </View>
             </View>
+          </View>
+          <View style={styles.body}>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -59,17 +76,25 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
   },
+  header: {
+    backgroundColor: '#dc3644',
+  },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: '#fff',
   },
   sectionContainer: {
-    marginTop: 32,
+    marginVertical: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+    fontWeight: '300',
+    color: '#fff',
+  },
+  sectionTitleBold: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
   },
   sectionDescription: {
     marginTop: 8,
@@ -80,6 +105,10 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  displayFont: {
+    fontSize:25,
+    color: '#fff'
+  },
   footer: {
     color: Colors.dark,
     fontSize: 12,
@@ -88,6 +117,9 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  bold: {
+    fontWeight: "bold"
+  }
 });
 
 export default App;
