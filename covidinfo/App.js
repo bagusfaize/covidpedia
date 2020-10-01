@@ -44,6 +44,20 @@ const App: () => React$Node = () => {
                 <Text style={styles.sectionTitle}>Today</Text>
                 <Text style={styles.sectionTitleBold}>Corona Virus Update</Text>
               </View>
+              <View style={{ flex: 1, flexDirection: 'row', marginTop: 55 }}>
+                <View style={{ flex: 1, height: 50, alignItems: 'center', borderRightColor:'white', borderRightWidth:.5}}>
+                  <Text style={styles.displayFont}>287.000</Text>
+                  <Text style={{fontSize:14, color:'#fff', fontWeight: 'bold'}}>Cases</Text>
+                </View>
+                <View style={{ flex: 1, height: 50, alignItems: 'center', borderRightColor:'white', borderRightWidth:.5}}>
+                  <Text style={styles.displayFont}>215.000</Text>
+                  <Text style={{fontSize:14, color:'#fff', fontWeight: 'bold'}}>Recovered</Text>
+                </View>
+                <View style={{ flex: 1, height: 50, alignItems: 'center'}}>
+                  <Text style={styles.displayFont}>10.000</Text>
+                  <Text style={{fontSize:14, color:'#fff', fontWeight: 'bold'}}>Deaths</Text>
+                </View>
+              </View>
             </View>
           </View>
           <View style={styles.body}>
@@ -81,7 +95,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
-
   },
   sectionDescription: {
     marginTop: 8,
@@ -91,6 +104,10 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  displayFont: {
+    fontSize:25,
+    color: '#fff'
   },
   footer: {
     color: Colors.dark,
