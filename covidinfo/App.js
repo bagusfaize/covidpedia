@@ -38,12 +38,15 @@ const App: () => React$Node = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
-          <View style={styles.body}>
+          <View style={styles.header}>
             <View style={styles.sectionContainer}>
-                <View>
-                <Text style={styles.sectionTitle}>Welcome to Covidinfo</Text>
+              <View>
+                <Text style={styles.sectionTitle}>Today</Text>
+                <Text style={styles.sectionTitleBold}>Corona Virus Update</Text>
               </View>
             </View>
+          </View>
+          <View style={styles.body}>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -59,17 +62,26 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
   },
+  header: {
+    backgroundColor: '#dc3644',
+  },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: '#fff',
   },
   sectionContainer: {
-    marginTop: 32,
+    marginVertical: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+    fontWeight: '300',
+    color: '#fff',
+  },
+  sectionTitleBold: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+
   },
   sectionDescription: {
     marginTop: 8,
@@ -88,6 +100,9 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  bold: {
+    fontWeight: "bold"
+  }
 });
 
 export default App;
